@@ -679,6 +679,326 @@ margin-right: 50px;
 
 /* Blog page */
 
+#page-header.blog-header{
+  background-image: url("img/banner/b19.jpg");
+}
+
+#blog {
+  padding: 150px 150px 0 150px;
+}
+#blog .blog-box{
+  display: flex;
+  align-items: center;
+  width: 100%;
+position: relative;
+padding-bottom: 90px;
+}
+
+#blog .blog-img{
+
+  width: 50%;
+  margin-right: 40px;
+}
+#blog img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+#blog .blog-details{
+  width: 50%;
+}
+
+#blog .blog-details a{
+  text-decoration: none;
+  font-size: 11px;
+  color: #000;
+  font-weight: 700;
+  position: relative;
+  transition: 0.3s;
+}
+#blog .blog-details a::after {
+  content: "";
+  width: 50px;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  top: 4px;
+  right: -60px;
+
+}
+
+#blog .blog-details a:hover{
+  color: #088178;
+
+}
+
+#blog .blog-details a:hover::after{
+ background-color: #088178;
+
+}
+
+
+
+#blog .blog-box h1{
+  position: absolute;
+  top: -40px;
+  left: 0;
+  font-size: 70px;
+  font-weight: 700;
+  color: #c9cbc9;
+  z-index: -9;
+}
+
+
+/* About page */
+
+#page-header.about-header{
+background-image: url("img/about/banner.png");
+}
+
+#about-head{
+  display: flex;
+  align-items: center;
+}
+
+#about-head img{
+  width: 50%;
+  height: auto;
+}
+
+#about-head div{
+  padding-left:40px ;
+}
+
+#about-app{
+  text-align: center;
+}
+#about-app .video{
+  width: 70%;
+  height: 100%;
+  margin: 30px auto 0 auto;
+}
+
+#about-app .video video{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+/* contact page */
+
+#contact-detalis{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#contact-detalis .detalis{
+width: 40%;
+}
+
+
+#contact-detalis .detalis span,
+#form-detalis form span{
+  font-size: 12px;
+  }
+
+#contact-detalis .detalis h2,
+#form-detalis form h2{
+    font-size: 26px;
+    line-height: 35px;
+    padding: 20px 0;
+  }
+
+#contact-detalis .detalis h3{
+      font-size: 16px;
+      padding-bottom: 15px;
+      }    
+
+ #contact-detalis .detalis li{
+list-style: none;
+display: flex;
+padding: 10px 0;
+ }
+
+ #contact-detalis .detalis li i{
+ font-size: 14px;
+ padding-right: 22px;
+}
+ #contact-detalis .detalis li p{
+font-size: 14px;
+margin: 0;
+}
+#contact-detalis .map {
+  width: 55%;
+  height: 400px;
+}
+ #contact-detalis .map iframe{
+width: 100%;
+height: 100%;
+ }
+ #form-detalis {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+  padding: 80px;
+  border: 1px solid #e1e1e1;
+ }
+
+#form-detalis form{
+width: 65%;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+
+#form-detalis form input,
+#form-detalis form textarea{
+  width: 100%;
+  padding: 12px 15px;
+  outline: none;
+  margin-bottom: 20px;
+  border: 1px solid #e1e1e1;
+}
+#form-detalis form button{
+  background-color: #088178;
+  color: #fff;
+}
+
+#form-detalis .people div{
+padding-bottom: 25px;
+display: flex;
+align-items: flex-start;
+}
+
+#form-detalis .people div img{
+  width: 65%;
+  height: 65%;
+  object-fit: cover;
+  margin-right: 15px;
+  }
+
+  #form-detalis .people div p{
+margin: 0;
+font-size: 13px;
+line-height: 25px;
+  }
+  
+#form-detalis .people div p span{
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+
+
+/* Cart-page */
+
+#cart {
+  overflow-x: auto;
+}
+
+
+#cart table{
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  white-space: nowrap;
+}
+
+#cart table img{
+  width: 70px;
+}
+
+
+#cart table td:nth-child(1){
+  width: 100px;
+  text-align: center;
+}
+#cart table td:nth-child(2){
+  width: 150px;
+  text-align: center;
+}
+#cart table td:nth-child(3){
+  width: 250px;
+  text-align: center;
+}
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6){
+  width: 150px;
+  text-align: center;
+}
+#cart table td:nth-child(5) input{
+  width: 70px;
+
+  padding: 10px 5px 10px 15px;
+}
+#cart table thead{
+  border: 1px solid #e2e9e1;
+  border-left:none;
+  border-right:none;
+}
+#cart table thead td{
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 18px 0;
+}
+#cart table thead tr td {
+  padding-top: 15px;
+}
+#cart table thead td{
+  font-size: 13px;
+}
+
+#cart-add{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#coupon{
+width: 50%;
+margin-bottom: 30px;
+}
+#coupon h3,
+#subtotal h3{
+  padding-bottom: 15px;
+}
+
+#coupon input{
+  padding: 10px 20px;
+  outline: none;
+  width: 60%;
+  margin-right: 10px;
+  border: 1px solid #e2e9e1;
+}
+#coupon button,
+#subtotal button{
+  background-color: #088178;
+  color: #fff;
+  padding: 12px 20px;
+}
+#subtotal{
+  width: 50%;
+  margin-bottom: 30px;
+  border: 1px solid #e2e9e1;
+  padding: 30px;
+}
+
+#subtotal table{
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+#subtotal table td{
+   width: 50%;
+   border: 1px solid #e2e9e1;
+   padding: 10px;
+   font-size: 13px;
+}
 /* Start Media Query */
 
 @media (max-width:799px) {
@@ -769,9 +1089,18 @@ margin: 15px 15px;
   
   width: 70%;
 }
+
+/* Contact page */
+#form-detalis {
+  padding: 40px;
+}
+#form-detalis form{
+  width: 50%;
 }
 
 
+
+}
 @media (max-width:477px) {
 
   .section-p1{
@@ -838,6 +1167,75 @@ footer .copyright{
   width: 100%;
 }
 
+/* Blog page */
+
+#blog {
+  padding: 100px 20px 0 20px;
+}
+
+#blog .blog-box{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#blog .blog-img{
+  width: 100%;
+  margin-right: 0px;
+  margin-bottom: 30px;
+}
+#blog .blog-details{
+  width: 100%;
+}
 
 
+/* About page */
+
+#about-head{
+  flex-direction: column;
+}
+#about-head img{
+  width: 100%;
+  margin-bottom: 20px;
+}
+#about-head div{
+  padding-left: 0px;
+}
+#about-head .video{
+width: 100%;
+}
+/* contact page */
+
+#contact-detalis {
+  flex-direction: column;
+}
+#contact-detalis .detalis{
+  width: 100%;
+  margin: 30px;
+}
+#contact-detalis .map {
+  width: 100%;
+}
+#form-detalis{
+  margin: 10px;
+  padding: 30px 10px;
+  flex-wrap: wrap;
+}
+#form-detalis form{
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/* cart page */
+
+#cart-add{
+  flex-direction: column;
+}
+#coupon{
+  width: 100%;
+}
+#subtotal{
+  width: 100%;
+  padding: 20px;
+}
 }
