@@ -1,59 +1,55 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Get cart button elements
-    const cartButtons = document.querySelectorAll('.cart');
-    // const cartCountElement = document.querySelector('.fa-bag-shopping');
-
-    // Simulated cart storage (replace with actual cart logic if needed)
-    let cartCount = 0;
-
-    // Update cart count display
-    const updateCartCount = () => {
-        if (cartCountElement) {
-            cartCountElement.textContent = cartCount;
-        } else {
-            const cartIcon = document.querySelector('.fa-bag-shopping');
-            if (cartIcon) {
-                const countElement = document.createElement('span');
-                countElement.classList.add('cart-count');
-                countElement.textContent = cartCount;
-                // cartIcon.appendChild(countElement);
-            }
-        }
-    };
-
-    // Add event listener to all cart buttons
+document.addEventListener("DOMContentLoaded", () => {
+    // Mobile navigation menu toggle
+    const bar = document.getElementById("bar");
+    const close = document.getElementById("close");
+    const navbar = document.getElementById("navber");
+  
+    if (bar) {
+      bar.addEventListener("click", () => {
+        navbar.classList.add("active");
+      });
+    }
+  
+    if (close) {
+      close.addEventListener("click", () => {
+        navbar.classList.remove("active");
+      });
+    }
+  
+    // Add to cart functionality (placeholder action)
+    const cartButtons = document.querySelectorAll(".cart");
     cartButtons.forEach((button) => {
-        button.addEventListener('click', (event) => {
-            event.preventDefault(); // Prevent default link action
-            cartCount++;
-            updateCartCount();
-            alert('Item added to cart!');
-        });
+      button.addEventListener("click", (event) => {
+        event.preventDefault();
+        alert("Item added to cart!");
+      });
     });
-
-    // Initialize cart count display
-    updateCartCount();
-});
-
-
-// Email validation and submission
-
-document.querySelector('.form .normal').addEventListener('click', function () {
-    const emailInput = document.querySelector('.form input[type="text"]');
-    const email = emailInput.value.trim();
-
-    if (email === "") {
-        alert("Please enter your email address.");
-        return;
-    }
-
-    // Simple email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
+  
+    // Smooth scrolling for pagination links
+    const paginationLinks = document.querySelectorAll("#pagination a");
+    paginationLinks.forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        const target = event.target;
+        if (target.getAttribute("href") === "#") {
+          alert("Pagination link clicked"); // Placeholder action
+        }
+      });
+    });
+  
+    // Newsletter form submission
+    const newsletterForm = document.querySelector("#newsletter .form");
+    const emailInput = newsletterForm.querySelector("input");
+    const signUpButton = newsletterForm.querySelector("button");
+  
+    signUpButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      if (emailInput.value.trim() === "") {
         alert("Please enter a valid email address.");
-        return;
-    }
-
-    alert(`Thank you for signing up with the email: ${email}`);
-    emailInput.value = ""; // Clear the input field
-});
+      } else {
+        alert(`Thank you for signing up, ${emailInput.value.trim()}!`);
+        emailInput.value = "";
+      }
+    });
+  });
+  
