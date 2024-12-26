@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form</title>
+    <title>Register Form</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,16 +13,16 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            /* background: url('') no-repeat center center fixed; */
-            /* background-size: cover; */
+            /* background: url('./img/blog/b4.jpg') no-repeat center center fixed; */
+            background-size: cover;
         }
 
         .login-container {
             width: 300px;
             padding: 20px;
-            background: #0d0d0d;
+            background: #060404;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(2, 1, 1, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .login-container h2 {
@@ -79,7 +79,7 @@
         }
 
         .forgot-password a:hover {
-            /* text-decoration: underline; */
+            text-decoration:solid;
             color: #ff0000;
         }
     </style>
@@ -87,25 +87,23 @@
 
 <body>
     <div class="login-container">
-        <h2>Login</h2>
+        <h2>Register</h2>
         <div id="login-form">
             <div class="form-group">
-                <input type="email" class="login-email" placeholder="Enter your email" required>
-
-                <input type="password" class="login-password" placeholder="Enter your password" required>
-           <p class="errMsg2"></p>
+                <input type="email" class="re-email" placeholder="Enter your email" required>
+                <input type="password" class="re-password" placeholder="Enter your password" required>
+                <input type="text" class="re-confirmPassword" placeholder="Enter your confirm password" required>
+           <p class="errMsg"></p>
             </div>
-            <button class="btn" onclick="module.login()">Login</button>
+            <button class="btn" onclick="module.register()">Register</button>
         </div>
         <div class="forgot-password">
-            <a href="#">Forgot Password?</a>
-            <br>
-            <a href="./register.html">Don't have an account ? Register</a>
-
+            <a href="./index.html">already have an account ? Login</a>
         </div>
     </div>
-    <script src="./module.js"></script>
+    
     <script type="module" src="./script2.js"></script>
+    <script src="./module.js"></script>
 </body>
 
 </html>
